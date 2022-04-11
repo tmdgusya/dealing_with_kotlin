@@ -5,9 +5,13 @@ fun main() {
 
     val combine = { acc: Int, nextElement: Int -> acc + nextElement }
 
+    val combineWithFunc = fun (acc: Int, nextElement: Int): Int {
+        return acc + nextElement
+    }
+
     val result = list.accumulate(
         0,
-        combine
+        combineWithFunc
     )
 
     println(result)
